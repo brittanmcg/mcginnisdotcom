@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Modal from "../components/Modal/Modal.jsx"
+import Modal from "../components/Modal/Modal";
 
 class MatchingGame extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class MatchingGame extends Component {
   }
 
   toggleModal() {
-    this.setState({ modal: !this.state.modal });
+    this.setState({ modal: !this.state.modal })
   }
 
   render() {
@@ -18,7 +18,7 @@ class MatchingGame extends Component {
       <div>
         <h1>MatchingGameContainer</h1>
         <div className="modal-container">
-          {this.state.modal === true && <Modal />}
+          {this.state.modal === true && <Modal userType={this.state.user}/>}
         </div>
         <div>
           <ul>
